@@ -4,7 +4,8 @@ import threading
 import aemet
 import datetime
 import conf_management as ConfMgt
-
+import os
+PORT = int(os.environ.get("PORT", "8443"))
 
 def start(bot, update):
     message = "Bienvenido al bot de Cora!"
@@ -51,8 +52,12 @@ def main(bot_token):
     dispatcher.add_handler(add_handler)    
     dispatcher.add_handler(weather_handler)
 
-    # Starting the bot
-    updater.start_polling()
+    # Starting the bot   
+    updater.start_webhook(listen="0.0.0.0",
+                          port=int(PORT),
+                          url_path=bot_token)
+    updater.bot.setWebhook('https://aemet-b-tele.herokuapp.com/' + bot_token)
+    updater.idle()
 
 
 def envia_telegram(bot_token, id_chat, texto_enviar):
