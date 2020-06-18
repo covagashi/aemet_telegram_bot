@@ -28,3 +28,28 @@ WAIT_TIME_SECONDS_WEATHER = 3600
 AEMET_TOKEN = "BBBBB"
 CITY_ID = "03333"
 ```
+
+
+##Adaptación heroku
+
+Nuevo archivo creado, Procfile.
+
+El main.py se ha cambiado el nombre a bot.py
+se han añadido las siguientes lineas de codigo a bot.py
+
+```
+import os
+PORT = int(os.environ.get("PORT", "8443"))
+```
+Se reemplaza ```updater.start_polling()``` por
+```
+  updater.start_webhook(listen="0.0.0.0",
+                          port=int(PORT),
+                          url_path=bot_token)
+    updater.bot.setWebhook('https://aemet-b-tele.herokuapp.com/' + bot_token)
+    updater.idle()
+```
+Puede que heroku se ponga en modo sleep, por el momento no se ha testeado lo suficiente
+
+
+
