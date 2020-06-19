@@ -37,7 +37,7 @@ def weather(bot, update):
 
 def main(bot_token):
     """ Main function of the bot """
-    updater = Updater(token=bot_token)
+    updater = Updater(token=bot_token, use_context=True)
     dispatcher = updater.dispatcher
 
     # Command handlers
