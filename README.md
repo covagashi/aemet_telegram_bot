@@ -30,7 +30,7 @@ CITY_ID = "03333"
 ```
 
 
-###Adaptación heroku
+## Adaptación heroku
 
 Nuevo archivo creado, Procfile.
 
@@ -49,7 +49,9 @@ Se reemplaza ```updater.start_polling()``` por
     updater.bot.setWebhook('https://aemet-b-tele.herokuapp.com/' + bot_token)
     updater.idle()
 ```
-Puede que heroku se ponga en modo sleep, por el momento no se ha testeado lo suficiente
+## Bugs
+
+El bot no te envia los mensajes automaticos.
 
 
 
