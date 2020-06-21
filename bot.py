@@ -44,8 +44,7 @@ def main(bot_token):
 
     # Add the handlers to the bot
     dispatcher.add_handler(start_handler)
-    dispatcher.add_handler(hello_handler)
-    dispatcher.add_handler(add_handler)    
+    dispatcher.add_handler(hello_handler)    
     dispatcher.add_handler(weather_handler)
 
     # Starting the bot for webhook  
