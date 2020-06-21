@@ -57,7 +57,7 @@ def main(bot_token):
     updater.start_webhook(listen="0.0.0.0",
                           port=int(PORT),
                           url_path=bot_token)
-    updater.bot.setWebhook('https://aemet-b-tele.herokuapp.com/' + bot_token)
+    updater.bot.setWebhook('https://YOUR APP NAME HERE.herokuapp.com/' + bot_token)
     updater.idle()
 
 
