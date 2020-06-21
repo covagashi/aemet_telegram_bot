@@ -8,6 +8,7 @@ Los comandos disponibles de momento son:
 
 - start: Da un mensaje de bienvenida
 - weather: Se conecta a AEMET y descarga la previsión meteorológica
+- hello: Te saluda
 
 ## Tareas periódicas
 
@@ -50,5 +51,5 @@ También teneis que activar el token del bot para que funcione para webook.
 
 ·Busqueda de municipios por chat.
 ·Tiempo por horas no por día.
-
+·Tiempo diario del día siguiente
 
