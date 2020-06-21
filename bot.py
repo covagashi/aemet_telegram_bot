@@ -53,7 +53,7 @@ def main(bot_token):
     dispatcher.add_handler(add_handler)    
     dispatcher.add_handler(weather_handler)
 
-    # Starting the bot   
+    # Starting the bot for webhook  
     updater.start_webhook(listen="0.0.0.0",
                           port=int(PORT),
                           url_path=bot_token)
