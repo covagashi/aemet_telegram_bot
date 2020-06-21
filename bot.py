@@ -3,6 +3,7 @@ from telegram.ext import CommandHandler
 import threading
 import aemet
 import datetime
+import schedule
 import conf_management as ConfMgt
 import os
 PORT = int(os.environ.get("PORT", "8443"))
@@ -79,10 +80,6 @@ def check_weather():
 
 if __name__ == "__main__":
     main(ConfMgt.get_telegram_token())
+    schedule.every().day.at('07:00').do(check_weather)
 
-    ticker = threading.Event()
-    while not ticker.wait(ConfMgt.get_weather_time()):
-        now = datetime.datetime.now()
-
-        if now.hour in (8, 12, 18, 0):
-            check_weather()
+    
