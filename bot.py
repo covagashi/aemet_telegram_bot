@@ -8,20 +8,16 @@ import conf_management as ConfMgt
 import os
 PORT = int(os.environ.get("PORT", "8443"))
 
+
+
 def start(bot, update):
-    message = "Bienvenido al bot de Cora!"
-    bot.send_message(chat_id=update.message.chat_id, text=message)
+    message = "Bienvenido, {}".format(update.effective_user.username) + " Te diré el tiempo cada mañana, también puedes usar el comando /weather para solicitar el tiempo actual"
+    bot.send_message(chat_id=update.message.chat_id, text=message))
 
 
 def hello(bot, update):
     greeting = "Hola, {}".format(update.effective_user.username)    
     bot.send_message(chat_id=update.message.chat_id, text=greeting)
-
-
-def add(bot, update, args):
-    result = sum(map(int, args))
-    message = "The result is: {}".format(result)
-    bot.send_message(chat_id=update.message.chat_id, text=message)
 
 
 def weather(bot, update):
@@ -43,8 +39,7 @@ def main(bot_token):
 
     # Command handlers
     start_handler = CommandHandler('start', start)
-    hello_handler = CommandHandler('hello', hello)
-    add_handler = CommandHandler('add', add, pass_args=True)
+    hello_handler = CommandHandler('hello', hello)    
     weather_handler = CommandHandler('weather', weather)
 
     # Add the handlers to the bot
