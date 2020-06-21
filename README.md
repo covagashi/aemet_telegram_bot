@@ -49,7 +49,7 @@ También teneis que activar el token del bot para que funcione para webook.
 
 ## Futuras implementaciones
 
-·Busqueda de municipios por chat.
-·Tiempo por horas no por día.
-·Tiempo diario del día siguiente
-
+-Busqueda de municipios por chat.
+-Tiempo por horas no por día.
+-Tiempo diario del día siguiente
+-Poner horas para enviar el mensaje automático.
