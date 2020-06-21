@@ -14,6 +14,7 @@ Los comandos disponibles de momento son:
 ## Tareas periódicas
 
 Las tareas que se ejecutan periódicamente son las siguientes:
+Se ejecuta cada día a las 7 AM
 
 - weather
 
@@ -49,9 +50,6 @@ Se reemplaza ```updater.start_polling()``` por
     updater.bot.setWebhook('https://aemet-b-tele.herokuapp.com/' + bot_token)
     updater.idle()
 ```
-## Bugs
-
-El bot no te envia los mensajes automaticos.
 
 
 
