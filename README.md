@@ -16,7 +16,7 @@ Las tareas que se ejecutan periódicamente son las siguientes:
 Se ejecuta cada día a las 7 AM para decirte el tiempo.
 (Al hacer el deploy en Heroku puede que  entre en modo reposo)
 
-## Configuración en los archivos
+## Configuración en los archivos en vuestro github privado
 
 Es necesaria la edición del fichero **config.py**:
 
@@ -44,5 +44,15 @@ en bot.py donde en la línea del código que se puede ver debajo.
 
 Heroku es una nube donde puedes tener apps gratis con cierta limitaciones. Para este bot es mas que suficiente.
 
+- Creamos la cuenta de Heroku
+- creamos la App, recordad que este es el nombre para modificar en **updater.bot.setWebhook('YOUR NAME APP HERE' + bot_token)**
+![Alt text](https://i.imgur.com/5otmEk4.jpg)
 
+- Conectamos nuestro github y buscamos el repositorio privado
+![Alt text](https://i.imgur.com/gvpF723.jpg)
+
+- Bajamos abajo del todo y le damos al deploy manual
+![Alt text](https://i.imgur.com/iVqGi7n.jpg)
+
+- Ahora entrais en telegram y hablais con vuestro bot. Ya lo teneis!
 
