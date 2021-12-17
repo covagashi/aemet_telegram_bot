@@ -1,6 +1,6 @@
 # Bot Telegram
 
-Este es un proyecto python el cual te dice el tiempo que hace cada mañana, tambien puedes activarlo manualmente.
+Este es un proyecto python el cual te dice el tiempo que hace cada mañana, también puedes activarlo manualmente.
 
 ## Comandos disponibles
 
@@ -14,10 +14,9 @@ Los comandos disponibles de momento son:
 
 Las tareas que se ejecutan periódicamente son las siguientes:
 Se ejecuta cada día a las 7 AM para decirte el tiempo.
+(Al hacer el deploy en Heroku puede que  entre en modo reposo)
 
-
-
-## Configuración
+## Configuración en los archivos
 
 Es necesaria la edición del fichero **config.py**:
 
@@ -28,10 +27,7 @@ WAIT_TIME_SECONDS_WEATHER = 3600
 AEMET_TOKEN = "BBBBB"
 CITY_ID = "03333"
 ```
-
 Solo es necesario en telegram token, aement token y el city ID, el resto se puede dejar tal cual.
-
-## Heroku
 
 Este Bot está preparado para ser alojado en Heroku, simplemente hay que crear una app en heroku y pegar el enlace
 en bot.py donde en la línea del código que se puede ver debajo.
@@ -44,6 +40,9 @@ en bot.py donde en la línea del código que se puede ver debajo.
     updater.idle()
 ```
 
+## Configuración Heroku
 
-También teneis que activar el token del bot para que funcione para webook.
+Heroku es una nube donde puedes tener apps gratis con cierta limitaciones. Para este bot es mas que suficiente.
+
+
 
