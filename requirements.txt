@@ -3,7 +3,7 @@ cffi==1.14.0
 chardet==3.0.4
 cryptography==42.0.4
 decorator==4.4.2
-future==0.18.2
+future==0.18.3
 idna==3.7
 mccabe==0.6.1
 pycodestyle==2.6.0
